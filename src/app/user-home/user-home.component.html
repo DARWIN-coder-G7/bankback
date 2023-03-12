@@ -1,0 +1,63 @@
+<h1>ACCOUNT LIST</h1>
+    <p class = "message-p">{{productstatusmessag}}</p>
+    <div class = "butt">
+      <a routerLink="/createacc"><button class="sett">Create New Acc
+      </button></a>
+    </div>
+
+<div class = "one">
+  
+<table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
+   
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="accholder">
+    <th mat-header-cell  *matHeaderCellDef>AccHolder</th>
+    <td mat-cell *matCellDef="let element"> {{element.accholder}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="mobilenum">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Phone </th>
+    <td mat-cell *matCellDef="let element"> {{element.mobilenum}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="deposit">
+    <th mat-header-cell *matHeaderCellDef> Deposit </th>
+    <td mat-cell *matCellDef="let element"> {{element.deposit}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="withdrawal">
+    <th mat-header-cell *matHeaderCellDef> WithDrawal </th>
+    <td mat-cell *matCellDef="let element"> {{element.withdrawal}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="moneytransfer">
+    <th mat-sort-header mat-header-cell *matHeaderCellDef> MoneyTransfer </th>
+    <td mat-cell *matCellDef="let element"> {{element.moneytransfer}} </td>
+  </ng-container>
+   
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element"> 
+      <a class = "update-button-spacer"
+       routerLink="/acctransac/{{element.accid}}">
+       <button mat-button color="accent" (click)="viewaccounts(element.userid)">ViewAcc</button>
+      </a>
+        
+     </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+  <mat-paginator [pageSizeOptions]="[3,5,15]" showFirstLastButtons>
+
+  </mat-paginator>
+
+</div>
+

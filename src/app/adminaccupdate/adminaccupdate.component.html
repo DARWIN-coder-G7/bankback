@@ -1,0 +1,27 @@
+<form #addproduct = "ngForm" (ngSubmit)="submit(addproduct.value)" class = "common-form">
+    <label class="texcol">Deposit</label>
+<mat-button-toggle-group  ngModel = {{accountdata?.deposit}}
+       name="deposit" aria-label="Font Style">
+    <mat-button-toggle value="true">Allow</mat-button-toggle>
+    <mat-button-toggle value="false">Block</mat-button-toggle>
+    </mat-button-toggle-group><br>
+    <label class="texcol">Withdrawal</label>
+    <mat-button-toggle-group  ngModel = {{accountdata?.withdrawal}}
+       name="withdrawal" aria-label="Font Style">
+    <mat-button-toggle value="true">Allow</mat-button-toggle>
+    <mat-button-toggle value="false">Block</mat-button-toggle>
+    </mat-button-toggle-group><br>
+    <label class="texcol">Money Transfer</label>
+    <mat-button-toggle-group  ngModel = {{accountdata?.moneytransfer}}
+       name="moneytransfer" aria-label="Font Style">
+    <mat-button-toggle value="true">Allow</mat-button-toggle>
+    <mat-button-toggle value="false">Block</mat-button-toggle>
+    </mat-button-toggle-group><br>
+    <label class="texcol">ChequeBook</label>
+    <mat-button-toggle-group  ngModel = {{accountdata?.chequebook}}
+       name="chequebook" aria-label="Font Style">
+    <mat-button-toggle value="true">Allow</mat-button-toggle>
+    <mat-button-toggle value="false">Block</mat-button-toggle>
+    </mat-button-toggle-group><br>
+    <button class="form-button">UPDATE ACC</button>
+</form>

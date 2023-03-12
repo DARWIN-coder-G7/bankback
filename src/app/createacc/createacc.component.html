@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+
+<div class="login">
+    <form #SellerSignup="ngForm" 
+(ngSubmit)="createacc(SellerSignup.value)" 
+class="common-form">
+<div class="login__field">
+    <input type="text" 
+class="login__input" 
+placeholder="AccHolder Name"
+name="accholder" ngModel />
+</div>
+<br>
+<div class="login__field">
+    <input type="number" 
+class="login__input" 
+placeholder="MobileNum"
+name="mobilenum" ngModel />
+</div>
+<br>
+<div class="login__field">
+    <input type="password" 
+class="login__input" 
+placeholder="Password"
+name="password" ngModel />
+</div>
+<br>
+<button class="button login__submit">
+    CREATE ACC</button>
+</form>
+
+</div></div></div></div>

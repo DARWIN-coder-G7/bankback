@@ -1,0 +1,47 @@
+
+      <div class="cent">
+        <p class ="message-n">{{lowbalancemsg}}</p>
+        <p class ="message-n">{{permissionchecker}}</p>
+        <p class ="message-p">{{notifymsg}}</p>
+        <p class ="message-t">{{transacmsg}}</p>
+        <button class="form-button"
+         (click)="viewtransac()">
+        HISTORY</button></div>
+<form #deposit = "ngForm" 
+(ngSubmit)="depositcash(deposit.value)" 
+class = "common-form">
+     <input type = number 
+     class="form-input"
+      placeholder="Enter amount" 
+      name="amount" ngModel />
+      <button  type = "submit"class="form-button">
+        DEPOSIT</button>
+    </form>
+<br><br>
+    <form #withdraw = "ngForm" 
+(ngSubmit)="withdrawcash(withdraw.value)" 
+class = "common-form">
+     <input type = number 
+     class="form-input"
+      placeholder="Enter amount" 
+      name="amount" ngModel />
+      <button  type = "submit"class="form-button">
+        DEBIT</button>
+    </form>
+    <br><br>
+    <form #transfer = "ngForm" 
+(ngSubmit)="transferamount(transfer.value)" 
+class = "common-form">
+     <input type = number 
+     class="form-input"
+      placeholder="Enter amount" 
+      name="amount" ngModel />
+      <input type = number 
+     class="form-input"
+      placeholder="Enter accno" 
+      name="id" ngModel />
+
+      <button  type = "submit"class="form-button">
+        TRANSFER</button>
+    </form>
+    

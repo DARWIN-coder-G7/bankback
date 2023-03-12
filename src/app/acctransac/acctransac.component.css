@@ -1,0 +1,35 @@
+.common-form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+.form-input{
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid aqua;
+    padding-left: 15px;
+    color: rgb(55, 0, 255);
+}
+.form-button{
+    height: 35px;
+    border: 1px solid aquamarine;
+    color: black;
+    cursor: pointer;
+}
+.cent{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.message-n{
+    color: red;
+    text-emphasis-style: inherit;
+}
+.message-p{
+    color: rgb(50, 249, 15);
+    text-emphasis-style: inherit;
+}
+.message-t{
+    color: rgb(232, 20, 204);
+    text-emphasis-style: inherit;
+}

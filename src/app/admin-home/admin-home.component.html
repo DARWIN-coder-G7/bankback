@@ -1,0 +1,65 @@
+<h1>USER LIST</h1>
+    <p class = "message-p">{{productstatusmessag}}</p>
+
+<div class = "one">
+  <mat-form-field>
+    <mat-label>SEARCH</mat-label>
+    <input matInput placeholder="Type here to search" (keyup)="Filterchange($event)">
+   </mat-form-field>
+<table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
+   
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="userid">
+    <th mat-header-cell  *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.userid}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="username">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="useremail">
+    <th mat-header-cell *matHeaderCellDef> Show Time </th>
+    <td mat-cell *matCellDef="let element"> {{element.useremail}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="userpass">
+    <th mat-header-cell *matHeaderCellDef> Genre </th>
+    <td mat-cell *matCellDef="let element"> {{element.userpass}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="block">
+    <th mat-sort-header mat-header-cell *matHeaderCellDef> Price </th>
+    <td mat-cell *matCellDef="let element"> {{element.block}} </td>
+  </ng-container>
+   
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element"> 
+      <a class = "update-button-spacer"
+       routerLink="/admin-acc-view/{{element.userid}}">
+       <button mat-button color="accent" >ViewAcc</button>
+      </a>
+        <mat-button-toggle-group  ngModel = {{element?.block}}
+        name="status" aria-label="Font Style">
+         <mat-button-toggle value="true"(click)="blockuser(element.userid)">Block</mat-button-toggle>
+         <mat-button-toggle value="false" (click)="unblockuser(element.userid)">UnBlock</mat-button-toggle>
+       </mat-button-toggle-group>
+     </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+  <mat-paginator [pageSizeOptions]="[3,5,15]" showFirstLastButtons>
+
+  </mat-paginator>
+
+</div>

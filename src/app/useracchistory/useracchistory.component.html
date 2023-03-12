@@ -1,0 +1,46 @@
+<div class = "one">
+    <mat-form-field>
+      <mat-label>SEARCH</mat-label>
+      <input matInput placeholder="Type here to search" (keyup)="Filterchange($event)">
+     </mat-form-field>
+  <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
+     
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="transactionid">
+        <th mat-header-cell  *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.transactionid}} </td>
+      </ng-container>
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Amount </th>
+      
+      <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="createingDate">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.createingDate}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="fromaccno">
+      <th mat-header-cell *matHeaderCellDef> FromAccNo </th>
+      <td mat-cell *matCellDef="let element"> {{element.fromaccno}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+    <mat-paginator [pageSizeOptions]="[3,5,15]" showFirstLastButtons>
+  
+    </mat-paginator>
+  
+  </div>
