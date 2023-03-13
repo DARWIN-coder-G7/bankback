@@ -28,8 +28,21 @@
 .message-p{
     color: rgb(50, 249, 15);
     text-emphasis-style: inherit;
+    text-align: center;
 }
 .message-t{
     color: rgb(232, 20, 204);
     text-emphasis-style: inherit;
+    font-family: cursive;
+    font-style: italic;
+    text-align: center;
+}
+.message-h{
+    color: rgb(232, 20, 204);
+    text-emphasis-style: inherit;
+    text-overflow: ellipsis;
+    font-weight: bolder;
+    font-family: cursive;
+    font-style: italic;
+    text-align: center;
 }

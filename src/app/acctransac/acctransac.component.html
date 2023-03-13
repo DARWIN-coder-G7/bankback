@@ -7,6 +7,15 @@
         <button class="form-button"
          (click)="viewtransac()">
         HISTORY</button></div>
+        <br><p class="message-h">ChequeBook Status</p>
+        <div *ngIf="accdata.chequebook; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <p class = "message-p">Processed</p>
+</ng-template>
+<ng-template #elseBlock>
+  <p class = "message-t">Processing...</p>
+</ng-template>
+      
 <form #deposit = "ngForm" 
 (ngSubmit)="depositcash(deposit.value)" 
 class = "common-form">
