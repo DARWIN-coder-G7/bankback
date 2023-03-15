@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutusComponent } from './aboutus/aboutus.component';
 import { AcctransacComponent } from './acctransac/acctransac.component';
 import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminaccupdateComponent } from './adminaccupdate/adminaccupdate.component';
 import { AdminaccviewComponent } from './adminaccview/adminaccview.component';
+import { ContactusComponent } from './contactus/contactus.component';
 import { CreateaccComponent } from './createacc/createacc.component';
 import { HomeComponent } from './home/home.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
@@ -14,6 +16,14 @@ import { UseracchistoryComponent } from './useracchistory/useracchistory.compone
 const routes: Routes = [{
   component:HomeComponent,
   path:''
+},
+{
+component:AboutusComponent,
+path:'ab'
+},
+{
+  component:ContactusComponent,
+  path:'con'
 },
 {
   component:AdminAuthComponent,

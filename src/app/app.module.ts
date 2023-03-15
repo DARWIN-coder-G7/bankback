@@ -18,6 +18,8 @@ import { CreateaccComponent } from './createacc/createacc.component';
 import { AcctransacComponent } from './acctransac/acctransac.component';
 import { AdminaccupdateComponent } from './adminaccupdate/adminaccupdate.component';
 import { UseracchistoryComponent } from './useracchistory/useracchistory.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { UseracchistoryComponent } from './useracchistory/useracchistory.compone
     CreateaccComponent,
     AcctransacComponent,
     AdminaccupdateComponent,
-    UseracchistoryComponent
+    UseracchistoryComponent,
+    AboutusComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
