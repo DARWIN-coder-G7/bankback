@@ -176,3 +176,12 @@ body {
 .social-login__icon:hover {
 	transform: scale(1.5);	
 }
+.message-n{
+	text-align: center;
+	-webkit-text-stroke-color: blueviolet;
+	color: rgb(220, 20, 20);
+	font-weight: bolder;
+	font-style: italic;
+	font-family: monospace;
+	font-size: xx-large;
+}

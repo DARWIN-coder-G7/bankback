@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { AcctransacComponent } from './acctransac/acctransac.component';
 import { AdminAuthComponent } from './admin-auth/admin-auth.component';
@@ -35,7 +36,8 @@ path:'ab'
 },
 {
   component:AdminHomeComponent,
-  path:'adminhome'
+  path:'adminhome',
+  canActivate:[AuthGuard]
 },
 {
   component:UserHomeComponent,
@@ -43,11 +45,13 @@ path:'ab'
 },
 {
   component:AdminaccviewComponent,
-  path:'admin-acc-view/:id'
+  path:'admin-acc-view/:id',
+  canActivate:[AuthGuard]
 },
 {
   component:AdminaccupdateComponent,
-  path:'admin-acc-update/:id'
+  path:'admin-acc-update/:id',
+  canActivate:[AuthGuard]
 },
 {
   component:CreateaccComponent,

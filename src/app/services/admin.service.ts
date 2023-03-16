@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AdminService {
   issellerloggedin = new BehaviorSubject<boolean>(false);
-  isloginerror = new EventEmitter<boolean>(false)
+  isloginerror = new EventEmitter<boolean>(false);
   constructor(private http:HttpClient,private router:Router) { }
   getalluser(){
     return this.http.get<any[]>(`http://localhost:8080/api/user`)
@@ -71,6 +71,7 @@ export class AdminService {
     if(result && result.body )
     {
       this.isloginerror.emit(false)
+      this.issellerloggedin.next(true);
       localStorage.setItem('admin',JSON.stringify(result.body))
       this.router.navigate(['adminhome'])
     }else{

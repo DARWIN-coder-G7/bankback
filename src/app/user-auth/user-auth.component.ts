@@ -7,10 +7,17 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./user-auth.component.css']
 })
 export class UserAuthComponent {
+  validator:undefined|String;
   constructor(private adminservice:AdminService){}
   signin(data: any): void {
     //console.warn(data)
     this.adminservice.userlogin(data);
+    if(this.adminservice.isloginerror){
+      this.validator="UserName Or Password is InCorrect";
+    }
+    setTimeout(()=>{
+      this.validator = undefined;
+    },3000)
     
   }
   signUp(data:any): void{

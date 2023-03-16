@@ -148,3 +148,12 @@ a{color:inherit;text-decoration:none}
 .foot-lnk{
 	text-align:center;
 }
+.message-n{
+	text-align: center;
+	-webkit-text-stroke-color: blueviolet;
+	color: rgb(220, 20, 20);
+	font-weight: bolder;
+	font-style: italic;
+	font-family: monospace;
+	font-size: xx-large;
+}
