@@ -46,3 +46,16 @@
     font-style: italic;
     text-align: center;
 }
+.bala{
+    padding-left: 10px;
+    color: rgb(242, 34, 128);
+    border-radius: 2px;
+    border-color: cornflowerblue;
+    background-color: aquamarine;
+    background-size: cover;
+    background-position: 10px;
+    background-clip: content-box;
+    padding-right: 1200px;
+    font-weight: bolder;
+    font-family: cursive;
+}

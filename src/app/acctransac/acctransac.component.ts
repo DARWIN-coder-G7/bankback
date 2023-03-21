@@ -146,7 +146,7 @@ ngOnInit(): void {
     this.transacdata.fromaccno = data.id;
     this.transacdata.toaccno = data.id;
     this.transacdata.amount = data.amount;
-    this.transacdata.status = "debit"
+    this.transacdata.status = "Credit"
     this.adserv.savetransacdata(this.transacdata).subscribe((x)=>{
 
     })
@@ -155,7 +155,7 @@ ngOnInit(): void {
     this.transacdata.fromaccno = data.id;
     this.transacdata.toaccno = data.id;
     this.transacdata.amount = data.amount;
-    this.transacdata.status = "credit"
+    this.transacdata.status = "Debit"
     this.adserv.savetransacdata(this.transacdata).subscribe((x)=>{
 
     })
@@ -165,7 +165,7 @@ ngOnInit(): void {
     //this.transacdata.toaccno = data.id;
     //this.accdata.amount = data.amount;
     this.transacdata.fromaccno=this.acid;
-    this.transacdata.status = "transfer";
+    this.transacdata.status = "Transfer";
     console.log(this.transacdata);
     this.adserv.savetransacdata(this.transacdata).subscribe((x)=>{
 

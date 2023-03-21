@@ -7,6 +7,7 @@
         <button class="form-button"
          (click)="viewtransac()">
         HISTORY</button></div>
+        <div class="bala">BALANCE ==> {{accdata.balance}}</div>
         <br><p class="message-h">ChequeBook Status</p>
         <div *ngIf="accdata.chequebook; then thenBlock else elseBlock"></div>
 <ng-template #thenBlock>
